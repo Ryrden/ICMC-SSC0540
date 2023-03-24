@@ -5,6 +5,9 @@
 - Laboratório de Redes
     - Conteúdo
     - Introdução ao Cisco Packet Tracer
+    - Objetivo
+    - Sensores x Atuadores
+    - Criando uma rede simples
 
 
 ## Introdução ao Cisco Packet Tracer
