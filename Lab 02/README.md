@@ -10,7 +10,9 @@
 
 ## Objetivo
 
-Substituir o endereço de rede (númerico) por texto, isso é feito com o endereço DNS do Servidor
+Separar a responsabilidade de servidores.
+
+Criar um servidor para DNS, DHCP e Email
 
 
 ## DNS
@@ -19,8 +21,21 @@ DNS (Domain Name System), é um sistema hierárquico e distribuído de gestão de no
 
 ## Passo a passo
 
-No servidor é necessário definir um endereço DNS e em DHCP é necessário definir o DNS com o IP definido anteriormente. 
 
-Após isso é necessário configurar cada maquina para que o DHCP seja definido automaticamente, dessa forma de adaptando com 
-o novo DNS definido, isso vai permitir agora acessar o site por texto
+O servidor DNS Ã© o pai de todos, ele redireciona para outros como email e o proprio site.
+
+
+Cada servidor deve ter um email statico bem definido e o DNS aponta para eles
+
+Toda comunicaÃ§Ã£o feita passa pelo DNS antes de ir ao servidor ideal.
+
+O servidor de DNS deve apontar a outros e definir o nome do dominio do servidor de emails como por exemplo "serveremail.com" (toda a comunicaÃ§Ã£o de emails deve passar por esse servidor)
+
+O servidor de DHCP Aponta ao DNS e inicia em uma porta distinta aos servidores para que os aparelhos conectados a rede seja configurado automaticamente com DHCP
+
+O servidor de EMAIL configura as contas como "Remetente" e "Destinatario" alÃ©m de definir qual serÃ¡ dominio do email como "meuemail.com.br"
+
+-------------
+
+Cada maquina terÃ¡ um DHCP para configurar seu IP automaticamente e deve configurar seu email sendo uma para "remetente" ou "destinatario"
 
