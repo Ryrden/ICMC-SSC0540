@@ -14,7 +14,7 @@ server?
 
 3. What is the IP address of your computer? Of the gaia.cs.umass.edu server?
 
-    **R:** XXX.XX.XXX.XXX //TODO: Put IP before submitting
+    **R:** XXX.XXX.XXX.XXX and the gaia.cs.umass.edu server is 128.119.245.12
 
 4. What is the status code returned from the server to your browser?
 
@@ -58,16 +58,15 @@ server?
 
 13. Which packet number in the trace contains the status code and phrase associated with the response to the HTTP GET request?
 
-    **R:** 
+    **R:** ---
 
 14. What is the status code and phrase in the response?
 
-    **R:**
+    **R:** ---
 
-15. How many data-containing TCP segments were needed to carry the single HTTP
-response and the text of the Bill of Rights?
+15. How many data-containing TCP segments were needed to carry the single HTTP response and the text of the Bill of Rights?
 
-    **R:**
+    **R:** ---
 
 ## HTML Documents with Embedded Objects - Questions
 
@@ -77,16 +76,14 @@ response and the text of the Bill of Rights?
 
 17. Can you tell whether your browser downloaded the two images serially, or whether they were downloaded from the two web sites in parallel? Explain
 
-    **R:**
+    **R:** The download time of the two images is 0.90 seconds apart and the GET request for the second image is made after the response of the first image, so the browser downloaded the two images serially.
 
 ## HTTP Authentication - Questions
 
-18. What is the server’s response (status code and phrase) in response to the initial
-HTTP GET message from your browser?
+18. What is the server’s response (status code and phrase) in response to the initial HTTP GET message from your browser?
 
     **R:** The server's response is 401 Unauthorized
 
-19. When your browser’s sends the HTTP GET message for the second time, what
-new field is included in the HTTP GET message?
+19. When your browser’s sends the HTTP GET message for the second time, what new field is included in the HTTP GET message?
 
     **R:** Last-Modified, ETag and Accept-Ranges headers
