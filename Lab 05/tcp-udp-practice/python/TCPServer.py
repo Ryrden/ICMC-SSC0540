@@ -6,10 +6,9 @@ serverSocket.listen(1)
 print('The server is ready to receive')
 while 1:
      connectionSocket, addr = serverSocket.accept()
-
-     sentence = connectionSocket.recv(1024)
-     print("TCP Receive", sentence, "FROM", addr)
-
-     capitalizedSentence = sentence.upper()
-     connectionSocket.send(capitalizedSentence)
+     numbers = connectionSocket.recv(1024)
+     print(f"TCP Receive {numbers.decode('utf_8')} FROM {addr}")
+     a,b = numbers.decode('utf_8').split(' ')
+     sum = int(a) + int(b)
+     connectionSocket.send(str(sum).encode('utf_8'))
      connectionSocket.close()

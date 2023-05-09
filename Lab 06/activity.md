@@ -44,10 +44,10 @@
 
     **R:** Yes there are retransmitted segments. I realized that by checking to repeated sequence numbers.
 
-10. How much data does the receiver typically acknowledge in an ACK? Can you identify cases where the receiver is ACKing every other received segment (see Table 3.2 on page 250 in the text).
+11. How much data does the receiver typically acknowledge in an ACK? Can you identify cases where the receiver is ACKing every other received segment (see Table 3.2 on page 250 in the text).
 
     **R:** The ACK numbers increase in the sequence 566,2026,3486,4946 ... the ACK numbers increase by 1460 each time, indicating that the receiver is acknowledging 1460 bytes. There are cases where the receiver is ACKing every other received segment.
 
-11. What is the throughput (bytes transferred per unit time) for the TCP connection? Explain how you calculated this value
+12. What is the throughput (bytes transferred per unit time) for the TCP connection? Explain how you calculated this value
 
     **R:** The last ACK number is 164091, as the first ack is 1, the total bytes transferred is 164090. The transmission time of the whole file is the difference of the time instant of the first TCP segment (0.026477 second for No.4 segment) and the time instant of the last ACK (5.455830 second for No. 202 segment), then, the total time is 5.455830 - 0.026477 = 5.429353 seconds. The throughput is 164090/5.429353 = 30200 bytes/second.
